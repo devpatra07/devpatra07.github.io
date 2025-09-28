@@ -252,21 +252,84 @@
           I'm <strong style="color: violet;">Dev Patra</strong>, an <strong style="color: violet;">Integrated (B.Tech + M.Tech) Chemical Engineering</strong> student from 
           <strong style="color: violet;">ICT Mumbai</strong> who loves solving problems using Tech.
           <br /><br />
-          What I bring to the table is a  blend of <strong style="color: violet;">chemical engineering knowledge</strong>, <strong style="color: violet;">coding skills</strong>, and 
-          <strong style="color: violet;">research experience</strong> to design, data-driven solutions.
-          <!-- <br /><br /> -->
-          I apply these strengths to tackle <strong style="color: violet;">real-world challenges</strong> using 
-          <strong style="color: violet;">Machine Learning</strong>, <strong style="color: violet;">Artificial Neural Networks</strong>, and 
-          <strong style="color: violet;">nature-inspired algorithms</strong>.
-          <br /><br />
-          My foundation in <strong style="color: violet;">Thermodynamic Modeling</strong>, <strong style="color: violet;">Simulation</strong>, and 
-          <strong style="color: violet;">Optimization</strong> supports my approach to solving complex engineering problems with computational precision.
         </p>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="gallery-heading">Gallery</h3>
+          <div class="gallery-container">
+            <div class="gallery-slide">
+              <img src="src/webp/ICMLDE.jpg" alt="Gallery Image 1">
+              <img src="src/webp/AAKRITI.jpg" alt="Gallery Image 2">
+              <img src="src/webp/you.jpg" alt="Gallery Image 3">
+              <img src="src/webp/DOW1.jpg" alt="Gallery Image 4">
+              <img src="src/webp/DOW2.jpg" alt="Gallery Image 5">
+            </div>
+          </div>
+        </div>
+
+        <style>
+        .gallery-section {
+          text-align: center;
+          margin: 40px auto;
+        }
+
+        .gallery-heading {
+          color: white;
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .gallery-container {
+          width: 90vw;
+          aspect-ratio: 1 / 1;
+          max-width: 400px;
+          margin: 0 auto;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+          position: relative;
+        }
+
+        .gallery-slide {
+          display: flex;
+          width: 100%; /* 5 images → 500% */
+          height: 100%;
+          animation: slide 25s infinite ease-in-out; /* smoother & slower */
+        }
+
+        .gallery-slide img {
+          width: 100%;
+          height: 100%;
+          flex-shrink: 0;
+          object-fit: cover; /* fills the square fully */
+          border-radius: 20px;
+          transition: transform 0.6s ease;
+        }
+
+        .gallery-slide img:hover {
+          transform: scale(1.05); /* zoom effect on hover */
+        }
+
+        /* Sliding keyframes */
+        @keyframes slide {
+          0%, 15%   { transform: translateX(0); }
+          20%, 35%  { transform: translateX(-100%); }
+          40%, 55%  { transform: translateX(-200%); }
+          60%, 75%  { transform: translateX(-300%); }
+          80%, 100% { transform: translateX(-400%); }
+        }
+        </style>
+
+
 
 
 
         
-        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="600">
+        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="200">
           <a href="mailto:patradev77@gmail.com" tabindex="-1">
             <button class="letsTalkBtn">
               <p class="letsTalkBtn-text">Let's Talk!</p>
@@ -318,7 +381,7 @@
     <div class="info-dp-section">
       <div class="about-info" style="line-height: 1.6; font-size: 0.95rem;">
         <p tabindex="0">
-          <strong>First Deployed Application:</strong> I developed and deployed my first interactive application on 
+          <!-- <strong>First Deployed Application:</strong> I developed and deployed my first interactive application on 
           <span class="highlight">Heat Exchanger Design (Kern’s Method)</span>.  
           <br />You can try it out here 👉 
           <a href="https://kernsmethod-devpatra.streamlit.app/" target="_blank" rel="noopener noreferrer" 
@@ -326,7 +389,7 @@
            <br /> Heat Exchanger Design App
           </a>.
         </p>
-        <br />
+        <br /> -->
         <p tabindex="0">
           <strong>Beyond Academics:</strong> I'm a <span class="highlight">State-level Table Tennis</span> player and enjoy <span class="highlight">Chess</span> — both help sharpen my focus and strategic thinking.
         </p>
@@ -555,51 +618,65 @@
 
 
     
-    <!-- skills section ends -->
-    <section class="Experience-section-container" id="Experience">
-      <div class="Experience-section-div">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="My Experience starts from here">
-            &#60;/Experience&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-        <div class="project-boxes-div">
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <!-- <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" /> -->
-                <article class="ProjectHeading">RPDS Innovations Pvt Ltd.</article>
-                <p class="ProjectDescription">
-                  - Achieved <strong style="color: violet;">40% faster process stabilization in industrial polymerization reactor</strong> using NN-MPC (Neural Network Model Predictive Control), MPC, in comparison to PID.<br><br>
-                  - Optimized PID, reducing <strong style="color: violet;">setpoint settling by 70%</strong>.<br><br>
-                  - Built <strong style="color: violet;"> Web Application  </strong> using Streamlit (Python) for automating the workflows.<br><br>
-                  - Identified <strong style="color: violet;">20 TEP faults (fault detection with advanced analytics)</strong> using AI & ML.<br><br>
-                </p>
+<!-- skills section ends -->
+<section class="Experience-section-container" id="Experience">
+  <div class="Experience-section-div">
+    <div class="section-heading" data-aos="fade-up">
+      <h2 class="section-heading-article" tabindex="0" aria-label="My Experience starts from here">
+        &#60;/Experience&#62;
+      </h2>
+      <p class="sectionHeadingP"></p>
+    </div>
 
-        
+    <div class="project-boxes-div">
+      <div data-aos="fade-up" class="project-box-wrapper">
+        <div class="project-box project-box2" id="project-box2">
+          <div class="info-div">
+            <article class="ProjectHeading">RPDS Innovations Pvt Ltd.</article>
+            <p class="ProjectDescription">
+              - Achieved <strong style="color: violet;">40% faster process stabilization in industrial polymerization reactor</strong> using NN-MPC (Neural Network Model Predictive Control), MPC, in comparison to PID.<br><br>
+              - Optimized PID, reducing <strong style="color: violet;">setpoint settling by 70%</strong>.<br><br>
+              - Built <strong style="color: violet;">Web Application</strong> using Streamlit (Python) for automating the workflows.<br><br>
+              - Identified <strong style="color: violet;">20 TEP faults (fault detection with advanced analytics)</strong> using AI & ML.<br><br>
+            </p>
 
-                <div class="project-buttons">
-                  <!-- <a href="https://www.linkedin.com/company/rpdsinnovations/posts/?feedView=all" target="_blank" class="github-redirect"
-                    aria-label="Visit Pexelicons on GitHub"> -->
-                    <!-- <img src="src/svg/github.svg" alt="github redirect button" /> -->
-                  </a>
-                  <a href="https://www.linkedin.com/company/rpdsinnovations/posts/?feedView=all" target="_blank" class="cta"
-                    aria-label="Visit Pexelicons Live">
-                    <span>View RPDS</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="5px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/RPDS_img.jpg" alt="Pexelicon website preview image" width="300" height="20">
-
-              </div>
+            <div class="project-buttons">
+              <a href="https://www.linkedin.com/company/rpdsinnovations/posts/?feedView=all" target="_blank" class="cta"
+                aria-label="Visit RPDS on LinkedIn">
+                <span>View RPDS</span>
+                <svg viewBox="0 0 13 10" height="10px" width="5px">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </a>
             </div>
           </div>
+
+          <div class="image-div">
+            <img src="src/webp/RPDS_img.jpg" alt="RPDS preview image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.image-div {
+  width: 100%;          /* full width of parent */
+  max-width: 400px;     /* keeps image from getting too large */
+  margin: 15px auto;    /* center inside the box */
+}
+
+.image-div img {
+  width: 100%;          /* responsive scaling */
+  height: auto;         /* keep aspect ratio */
+  object-fit: contain;  /* show full image without cropping */
+  display: block;
+  border-radius: 8px;   /* optional styling */
+}
+</style>
+
 
 <!-- DIAT Project -->
 <div class="project-box-wrapper" data-aos="fade-up">

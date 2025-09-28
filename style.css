@@ -569,7 +569,7 @@ noscript {
 
 .landing-page-container {
     width: 100%;
-    height: calc(120vh - 10px);
+    height: calc(160vh - 10px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2016,4 +2016,11 @@ footer {
         height: fit-content;
         margin-top: 0.1px;  
     }
+}
+
+#Research {
+  width: 100vw;   /* full viewport width */
+  margin: 0;
+  padding: 20px;  /* optional, adjust as needed */
+  box-sizing: border-box;  /* ensures padding doesn’t exceed width */
 }

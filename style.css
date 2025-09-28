@@ -569,7 +569,7 @@ noscript {
 
 .landing-page-container {
     width: 100%;
-    height: calc(170vh - 10px);
+    height: calc(180vh - 10px);
     display: flex;
     flex-direction: row;
     align-items: center;

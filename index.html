@@ -1,985 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-  <!-- don't forget to remove this >>>>(google tag manager) script, if you are using this page/code -->
-  <!-- don't forget to remove this >>>>(google tag manager) script, if you are using this page/code -->
-  <!-- don't forget to remove this >>>>(google tag manager) script, if you are using this page/code -->
-  <!-- don't forget to remove this >>>>(google tag manager) script, if you are using this page/code -->
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMWDE0VTD3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Dev Patra — Chemical Engineering student at ICT Mumbai, researcher and pythonist. Publications, industrial experience, and software." />
+<meta name="author" content="Dev Patra" />
+<meta property="og:title" content="Dev Patra | ICT Mumbai" />
+<meta property="og:description" content="Chemical Engineer & Pythonist — research, industrial internships, and software." />
+<title>Dev Patra · Chemical Engineer &amp; Pythonist</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f6f7f9;
+    --surface-2:#eef0f3;
+    --line: rgba(31,26,58,0.10);
+    --text:#231f3d;
+    --muted:#655f7c;
+    --violet:#6d4bf2;
+    --violet-deep:#4f31d1;
+    --amber:#c9781f;
+    --teal:#0d8f83;
+    --tint-violet:#f4f1ff;
+    --tint-violet-line: rgba(109,75,242,0.14);
+    --tint-teal:#eefbf8;
+    --tint-teal-line: rgba(13,143,131,0.16);
+    --tint-amber:#fff8ee;
+    --tint-amber-line: rgba(201,120,31,0.18);
+    --radius: 14px;
+    --maxw: 1100px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 550px at 88% -8%, rgba(109,75,242,0.06), transparent 60%),
+      radial-gradient(900px 500px at 0% 8%, rgba(13,143,131,0.05), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+
+  ::selection{ background:var(--violet); color:#fff; }
+
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.82);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:var(--maxw); margin:0 auto; padding:14px 24px;
+  }
+  .brand{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700; font-size:1.05rem;
+    display:flex; align-items:center; gap:10px;
+  }
+  .brand .dot{ color:var(--amber); }
+  .navlinks{
+    display:flex; gap:28px; list-style:none; margin:0; padding:0;
+    font-size:0.92rem; color:var(--muted);
+  }
+  .navlinks a{ transition:color .2s ease; position:relative; }
+  .navlinks a:hover, .navlinks a:focus-visible{ color:var(--text); }
+  .navlinks a::after{
+    content:''; position:absolute; left:0; bottom:-6px; height:1px; width:0;
+    background:var(--violet); transition:width .25s ease;
+  }
+  .navlinks a:hover::after{ width:100%; }
+
+  .burger{ display:none; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:8px 10px; color:var(--text); cursor:pointer; }
+  .burger span{ display:block; width:18px; height:2px; background:var(--text); margin:3px 0; }
+
+  .mobile-menu{ display:none; }
+
+  @media (max-width: 780px){
+    .navlinks{ display:none; }
+    .burger{ display:block; }
+    .mobile-menu.open{
+      display:flex; flex-direction:column; gap:2px;
+      max-width:var(--maxw); margin:0 auto; padding:0 24px 16px;
+      background:var(--bg);
     }
-    gtag("js", new Date());
+    .mobile-menu a{
+      padding:12px 4px; border-top:1px solid var(--line); color:var(--muted); font-size:0.95rem;
+    }
+  }
 
-    gtag("config", "G-YMWDE0VTD3");
-  </script>
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
-  <meta name="google-site-verification" content="zMNl24ruDnyqiliYwKNU_r09OkPCDKz0kMBtF9nqiCc" />
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
-  <!-- don't forget to remove this >>(google site verification meta tag) tag, if you are using this page/code -->
+  /* ---------- Hero ---------- */
+  .hero{ padding:96px 0 72px; }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+  }
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns:1fr; gap:44px; }
+    .gallery-wrap{ order:-1; }
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--teal); font-size:0.82rem;
+    letter-spacing:0.06em;
+    display:inline-flex; align-items:center; gap:8px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{ content:''; width:7px; height:7px; border-radius:50%; background:var(--teal); box-shadow:0 0 10px rgba(13,143,131,0.4); }
 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#000" />
-  <meta name="description"
-    content="Dev Patra | ICT Mumbai, Visit and know about me & my Experience.
-  <meta name="keywords"
-    content="Dev Patra,Deb Patra ICT Mumbai,ICT Mumbai,DevPatra,Dev Patra site,Dev Kamlesh Patra,Dev Patra google,Dev Patra web,Dev Patra github,Devpatra site,Dev Patra ICT Jalna,Dev Patra google scholar,ICT Jalna,Dev Patra chemical engineer,Pythonist,IOC Bubaneshwar,ICTian, Dev Patra news, Dev Scientist, Dev, Dev Patra website, ICT Marj, Dev Patra ict marj" />
-  <meta name="author" content="Dev Patra" />
-  <meta property="og:image" content="https://www.devpatra.site/src/png/Preview-card-min.png" />
-  <meta property="og:title" content="Dev Patra | ICT Mumbai" />
-  <meta property="og:description"
-    content="Hi! My name is Dev Patra. I'm a Chemical Engineer and pythonist.
-  <meta property="og:url" content="https://devpatra.site" />
-  <meta property="og:site_name" content="Dev Patra ICT Mumbai" />
+  .hero h1{
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    font-weight:700;
+    line-height:1.04;
+  }
+  .hero h1 .accent{ color:var(--violet); }
+  .hero-sub{
+    margin-top:22px; max-width:640px; font-size:1.08rem; color:var(--muted);
+  }
+  .hero-sub strong{ color:var(--text); font-weight:600; }
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@devpatra07" />
-  <meta name="twitter:title" content="Dev Patra | ICT Mumbai" />
-  <meta name="twitter:description"
-  content="Hi! My name is Dev Patra. I'm a Chemical Engineer and pythonist." />
-  <meta name="twitter:image" content="https://www.devpatra.site/src/png/Preview-card-min.png" />
-  <title>Dev Patra | ICT Mumbai</title>
-  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
-  <!-- aos cdn -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- google fonts-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+  .stat-row{ display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; }
+  .stat{
+    border:1px solid var(--line); border-radius:12px;
+    padding:14px 18px; background:var(--surface);
+    min-width:150px;
+  }
+  .stat .num{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.5rem; color:var(--amber); }
+  .stat .lbl{ font-size:0.78rem; color:var(--muted); margin-top:2px; }
 
-<body class="body">
-  <audio loop="" id="audioPlayer" style="display: none">
-    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
-  </audio>
-  <div id="preloader"></div>
-  <noscript>Allow Javascript</noscript>
+  .hero-actions{ display:flex; gap:14px; margin-top:38px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 22px; border-radius:10px; font-weight:600; font-size:0.94rem;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+    border:1px solid transparent; cursor:pointer;
+  }
+  .btn-primary{ background:var(--violet); color:#fff; }
+  .btn-primary:hover{ background:var(--violet-deep); transform:translateY(-2px); box-shadow:0 10px 26px rgba(109,75,242,0.25); }
+  .btn-ghost{
+    border-color:var(--violet); color:var(--violet); background:#fff;
+  }
+  .btn-ghost:hover{ background:var(--violet); color:#fff; transform:translateY(-2px); box-shadow:0 10px 26px rgba(109,75,242,0.18); }
 
-  <header>
-    <div class="cursor-inner" id="cursor-inner"></div>
-    <div class="cursor-outer" id="cursor-outer"></div>
+  /* ---------- Section shell ---------- */
+  section{ padding:88px 0; border-top:1px solid var(--line); }
+  section.tint-violet{ background:var(--tint-violet); border-top:1px solid var(--tint-violet-line); border-bottom:1px solid var(--tint-violet-line); }
+  section.tint-teal{ background:var(--tint-teal); border-top:1px solid var(--tint-teal-line); border-bottom:1px solid var(--tint-teal-line); }
+  section.tint-amber{ background:var(--tint-amber); border-top:1px solid var(--tint-amber-line); border-bottom:1px solid var(--tint-amber-line); }
+  .section-head{ margin-bottom:44px; }
+  .section-tag{
+    font-family:'JetBrains Mono', monospace; font-size:0.78rem; color:var(--teal);
+    letter-spacing:0.08em; text-transform:uppercase; display:block; margin-bottom:10px;
+  }
+  .section-head h2{ font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight:600; }
 
-    <div class="navbar" id="navbar">
-      <div class="hey">Hey!</div>
-      <div class="logo" tabindex="0" aria-label="Dev Patra logo">
-        <div class="logo-top">
-          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 0.9fr; gap:56px; align-items:start; }
+  @media (max-width: 860px){ .about-grid{ grid-template-columns:1fr; } }
+
+  .about-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:22px; }
+  .about-list li{ display:flex; gap:16px; }
+  .about-list .ico{
+    flex-shrink:0; width:38px; height:38px; border-radius:9px;
+    background:#ffffff; border:1px solid var(--tint-violet-line);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--amber); font-family:'JetBrains Mono', monospace; font-size:0.85rem; font-weight:600;
+    box-shadow:0 4px 12px rgba(109,75,242,0.08);
+  }
+  .about-list b{ color:var(--text); }
+  .about-list p{ margin:4px 0 0; color:var(--muted); font-size:0.96rem; }
+
+  .avatar-card{
+    border:1px solid var(--line); border-radius:20px; background:#ffffff;
+    padding:32px; text-align:center;
+    box-shadow:0 20px 45px rgba(109,75,242,0.10);
+  }
+  .avatar-photo{
+    width:132px; height:132px; border-radius:50%; margin:0 auto 20px;
+    overflow:hidden; border:3px solid #fff; box-shadow:0 0 0 1px var(--line), 0 12px 30px rgba(109,75,242,0.15);
+    background: conic-gradient(from 210deg, var(--violet), var(--teal), var(--amber), var(--violet));
+    display:flex; align-items:center; justify-content:center;
+  }
+  .avatar-photo img{ width:100%; height:100%; object-fit:cover; }
+  .avatar-card h3{ font-size:1.15rem; font-weight:600; }
+  .avatar-card .role{ color:var(--muted); font-size:0.9rem; margin-top:4px; }
+
+  .resume-btn{
+    margin-top:24px; width:100%; justify-content:center;
+    background:var(--violet); border:1px solid var(--violet); color:#fff;
+    padding:13px; border-radius:10px; font-weight:600; cursor:pointer; font-size:0.92rem;
+    display:flex; align-items:center; gap:8px;
+    transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+    box-shadow:0 6px 16px rgba(109,75,242,0.22);
+  }
+  .resume-btn svg{ fill:#fff; }
+  .resume-btn:hover{ background:var(--violet-deep); transform:translateY(-2px); box-shadow:0 10px 22px rgba(109,75,242,0.3); }
+
+  /* ---------- Gallery ---------- */
+  .gallery-wrap{ margin-top:0; }
+  .gallery-container{
+    width:100%; aspect-ratio:1/1; margin:0 auto;
+    overflow:hidden; border-radius:20px; position:relative;
+    border:1px solid var(--line); box-shadow:0 20px 50px rgba(109,75,242,0.14);
+  }
+  .gallery-slide{
+    display:flex; width:100%; height:100%;
+    animation: slide 15s infinite ease-in-out;
+  }
+  .gallery-slide img{
+    width:100%; height:100%; flex-shrink:0; object-fit:cover;
+  }
+  @keyframes slide{
+    0%, 15%   { transform: translateX(0); }
+    20%, 35%  { transform: translateX(-100%); }
+    40%, 55%  { transform: translateX(-200%); }
+    60%, 75%  { transform: translateX(-300%); }
+    80%, 100% { transform: translateX(-400%); }
+  }
+  .gallery-caption{ text-align:center; margin-top:14px; color:var(--muted); font-size:0.85rem; font-family:'JetBrains Mono', monospace; }
+
+  /* ---------- Research timeline ---------- */
+  .timeline{ display:flex; flex-direction:column; gap:14px; }
+  .tl-item{
+    display:grid; grid-template-columns:64px 1fr; gap:22px;
+    padding:26px; background:#ffffff; border-radius:16px;
+    border:1px solid var(--tint-teal-line);
+    box-shadow:0 10px 26px rgba(13,143,131,0.07);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .tl-item:hover{ transform:translateY(-3px); box-shadow:0 16px 34px rgba(13,143,131,0.12); }
+  .tl-num{ font-family:'JetBrains Mono', monospace; color:var(--muted); font-size:0.85rem; padding-top:4px; }
+  .tl-item h3{ font-size:1.05rem; font-weight:600; }
+  .tl-meta{ font-family:'JetBrains Mono', monospace; font-size:0.78rem; color:var(--teal); margin-bottom:8px; display:block; }
+  .tl-item p{ color:var(--muted); margin:8px 0 0; font-size:0.95rem; }
+  .tl-link{ color:var(--violet); font-size:0.88rem; font-weight:600; display:inline-block; margin-top:10px; }
+  .tl-link:hover{ text-decoration:underline; }
+  .badge{
+    display:inline-block; font-family:'JetBrains Mono', monospace; font-size:0.72rem;
+    color:var(--amber); border:1px solid rgba(201,120,31,0.35); border-radius:6px; padding:2px 8px;
+    margin-bottom:8px; background:var(--tint-amber);
+  }
+
+  /* ---------- Experience ---------- */
+  .exp-card{
+    border:1px solid var(--tint-amber-line); border-radius:16px; background:#ffffff;
+    padding:30px; margin-bottom:22px;
+    box-shadow:0 10px 28px rgba(201,120,31,0.07);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .exp-card:hover{ transform:translateY(-3px); box-shadow:0 16px 36px rgba(201,120,31,0.12); }
+  .exp-body{ display:grid; grid-template-columns:1fr 220px; gap:28px; align-items:center; }
+  @media (max-width: 760px){ .exp-body{ grid-template-columns:1fr; } }
+  .exp-photo{
+    border-radius:12px; overflow:hidden; border:1px solid var(--tint-amber-line);
+    aspect-ratio:4/3; background:var(--tint-amber);
+  }
+  .exp-photo img{ width:100%; height:100%; object-fit:cover; }
+  .exp-photo-logo{ display:flex; align-items:center; justify-content:center; padding:20px; }
+  .exp-photo-logo img{ width:auto; height:100%; max-width:100%; object-fit:contain; }
+  .exp-head h3{ font-size:1.15rem; font-weight:600; }
+  .exp-sub{ color:var(--muted); font-size:0.86rem; margin-top:4px; font-family:'JetBrains Mono', monospace;}
+  .exp-card ul{ margin:18px 0 0; padding-left:20px; color:var(--muted); font-size:0.95rem; }
+  .exp-card ul li{ margin-bottom:8px; }
+  .exp-card ul li strong{ color:var(--text); }
+  .exp-link{ margin-top:18px; display:inline-flex; align-items:center; gap:6px; color:var(--teal); font-size:0.88rem; font-weight:600; }
+  .exp-link:hover{ text-decoration:underline; }
+
+  /* ---------- Skills tiles ---------- */
+  .tiles{ display:grid; grid-template-columns:repeat(auto-fill, minmax(96px, 1fr)); gap:14px; }
+  .tile{
+    aspect-ratio:1/1; border:1px solid var(--line); border-radius:12px;
+    background:var(--surface); padding:10px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition:transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+    position:relative; overflow:hidden;
+  }
+  .tile:hover{ transform:translateY(-4px); border-color:var(--violet); background:#fff; box-shadow:0 12px 24px rgba(109,75,242,0.14); }
+  .tile .sym{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.5rem; }
+  .tile .name{ font-family:'JetBrains Mono', monospace; font-size:0.62rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; }
+  .tile .num{ position:absolute; top:8px; right:10px; font-family:'JetBrains Mono', monospace; font-size:0.62rem; color:var(--muted); }
+
+  /* ---------- Footer ---------- */
+  footer{ border-top:1px solid var(--line); padding:56px 0 34px; }
+  .footer-top{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px; }
+  .footer-quote{ font-family:'Space Grotesk', sans-serif; font-size:1.3rem; max-width:420px; }
+  .footer-quote .accent{ color:var(--amber); }
+  .socials{ display:flex; gap:14px; }
+  .socials a{
+    width:40px; height:40px; border:1px solid var(--line); border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    transition:border-color .2s ease, color .2s ease, transform .2s ease;
+    color:var(--muted); background:var(--surface);
+  }
+  .socials a:hover{ border-color:var(--violet); color:var(--violet); transform:translateY(-2px); }
+  .socials svg{ width:18px; height:18px; fill:currentColor; }
+  .footer-bottom{
+    margin-top:44px; padding-top:20px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.82rem; color:var(--muted);
+  }
+  .back-top:hover{ color:var(--teal); }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.show{ opacity:1; transform:none; }
+
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--teal); outline-offset:3px; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="mono accent">&lt;/</span>Dev Patra<span class="dot mono">;</span></div>
+    <ul class="navlinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home" style="border-top:none;">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">namaste();</span>
+          <h1>Dev Patra —<br><span class="accent">Chemical Engineer</span> &amp; Pythonist.</h1>
+          <p class="hero-sub">
+            Integrated M.Tech (B.Tech + M.Tech) Chemical Engineering student at <strong>ICT Mumbai</strong>,
+            building at the intersection of process engineering, molecular modelling, and machine learning.
+          </p>
+
+          <div class="stat-row">
+            <div class="stat"><div class="num">9.9<span style="font-size:1rem;color:var(--muted);">/10</span></div><div class="lbl">CGPA · 12 trimesters</div></div>
+            <div class="stat"><div class="num">6</div><div class="lbl">In-plant internships</div></div>
+            <div class="stat"><div class="num">4</div><div class="lbl">Int'l publications</div></div>
+            <div class="stat"><div class="num">1</div><div class="lbl">Copyrighted software</div></div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="mailto:patradev77@gmail.com" class="btn btn-primary">Let's talk →</a>
+            <button class="btn btn-ghost" onclick="openURL()">Download résumé</button>
+          </div>
+        </div>
+
+        <div class="avatar-card reveal">
+          <div class="avatar-photo"><img src="src/webp/devp.jpeg" alt="Dev Patra" /></div>
+          <h3>Dev Patra</h3>
+          <div class="role">Chemical Engineering · ICT Mumbai</div>
+          <button class="resume-btn" onclick="openURL()">
+            <svg width="16" height="16" viewBox="0 0 640 512"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z"/></svg>
+            View résumé
+          </button>
         </div>
       </div>
-      <div class="navbar-tabs" id="navbar-tabs">
-        <ul class="navbar-tabs-ul">
-          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
-            <a href="#home" tabindex="0" aria-label="Home menu button">
-              &#60;/Home&#62;
-            </a>
-          </li>
+    </div>
+  </section>
 
-          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
-            <a href="#about" aria-label="about menu button">
-              &#60;/AboutMe&#62;
-            </a>
-          </li>
+  <section id="about" class="tint-violet">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">01 · Who I am</span>
+        <h2>About me</h2>
+      </div>
 
-
-          <li class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
-            <a href="#Research" aria-label="Research menu button">
-              &#60;/Research Papers, Conferences & IPs&#62;
-            </a>
+      <div class="about-grid">
+        <ul class="about-list reveal">
+          <li>
+            <div class="ico">TT</div>
+            <div><b>Beyond academics —</b>
+              <p>State-level Table Tennis player, and I enjoy Chess in my free time.</p>
+            </div>
           </li>
-
-          <li class="Experience" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
-            <a href="#Experience" aria-label="Experience menu button">
-              &#60;/Experience&#62;
-            </a>
+          <li>
+            <div class="ico">Web</div>
+            <div><b>Web Design Head &amp; Treasurer, AAKRITI 1.0 —</b>
+              <p>Led the web team to build an interactive event platform, while managing event finances and execution.</p>
+            </div>
           </li>
-          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
-            <a href="#skills" aria-label="skills menu button">
-              &#60;/Skills&#62;
-            </a>
+          <li>
+            <div class="ico">Ed</div>
+            <div><b>Editor, MARJAL (ICT Mumbai, MARJ Campus) —</b>
+              <p>Edited and curated content for the institute's biannual magazine, overseeing a team of writers for two years.</p>
+            </div>
           </li>
         </ul>
-      </div>
-      <!-- navbar tabs ends -->
-    </div>
-  </header>
-  <!-- header ends here -->
 
-  <main>
-    <!-- hamburger -->
-    <div class="hamburger" id="hamburger" data-aos="fade">
-      <div class="hamburgerbase">
-        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
-          <span class="burger-bar" id="burger-bar1"></span>
-          <span class="burger-bar" id="burger-bar2"></span>
-          <span class="burger-bar" id="burger-bar3"></span>
-        </button>
-      </div>
-    </div>
-    <!-- hamburger -->
-    <div class="mobiletogglemenu" id="mobiletogglemenu">
-      <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
-        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
-          <a href="#home" tabindex="0" aria-label="Home menu button">
-            &#60;/Home&#62;
-          </a>
-        </li>
-
-        <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
-          <a href="#about" tabindex="0" aria-label="about menu button">
-            &#60;/AboutMe&#62;
-          </a>
-        </li>
-
-        <li  class="mobile-navbar-tabs-li Research" onclick="hidemenubyli()">
-          <a href="#Research" tabindex="0" aria-label="Research menu button">
-            &#60;/Research Papers, Conferences & IPs&#62;
-          </a>
-        </li>
-
-        </li>
-        <li id="Experience-mobile-tab" class="mobile-navbar-tabs-li Experience" onclick="hidemenubyli()">
-          <a href="#Experience" tabindex="0" aria-label="Experience menu button">
-            &#60;/Experience&#62;
-          </a>
-        </li>
-        <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
-          <a href="#skills" tabindex="0" aria-label="skills menu button">
-            &#60;/Skills&#62;
-          </a>
-        </li>
-
-      </ul>
-    </div>
-    <!-- mobile toggle menu ends -->
-
-    <section class="landing-page-container" id="home" style="padding-top: 0.001px; margin-bottom: 10px;">
-
-
-      <div class="blob"></div>
-
-      <div class="text-content">
-        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
-          <p class="jello">N</p>
-          <p class="jello">a</p>
-          <p class="jello">m</p>
-          <p class="jello">a</p>
-          <p class="jello">s</p>
-          <p class="jello">t</p>
-          <p class="jello">e</p>
-          <p class="jello">(</p>
-          <p class="jello">)</p>
-          <p class="jello">;</p>
-          &nbsp;
-          <p class="jello">I</p>
-          <p class="jello">'</p>
-          <p class="jello">m</p>
-        </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="100">
-          <p class="jello">D</p>
-          <p class="jello">e</p>
-          <p class="jello">v</p>
-
-          &nbsp;
-          <p class="jello">P</p>
-          <p class="jello">a</p>
-          <p class="jello">t</p>
-          <p class="jello">r</p>
-          <p class="jello">a</p>
-
-        </article>
-
-        <article id="work" data-aos="fade-up" data-aos-delay="200">
-          <div>
-            <p class="jello">I</p>
-          </div>
-          <div>
-            <p class="jello">a</p>
-            <p class="jello">m</p>
-          </div>
-          <div>
-            <p class="jello">C</p>
-            <p class="jello">h</p>
-            <p class="jello">e</p>
-            <p class="jello">m</p>
-            <p class="jello">i</p>
-            <p class="jello">c</p>
-            <p class="jello">a</p>
-            <p class="jello">l</p>
-          </div>
-          <div>
-            <p class="jello">E</p>
-            <p class="jello">n</p>
-            <p class="jello">g</p>
-            <p class="jello">i</p>
-            <p class="jello">n</p>
-            <p class="jello">e</p>
-            <p class="jello">e</p>
-            <p class="jello">r</p>
-
-            
-          </div>
-          <div>
-            <p class="jello">&</p>
-          </div>
-          <div>
-            <p class="jello">P</p>
-            <p class="jello">y</p>
-            <p class="jello">t</p>
-            <p class="jello">h</p>
-            <p class="jello">o</p>
-            <p class="jello">n</p>
-            <p class="jello">i</p>
-            <p class="jello">s</p>
-            <p class="jello">t</p>
-          </div>
-          <div>
-
-          </div>
-        </article>
-        <p id="info-para" data-aos="fade-up" data-aos-delay="400" style="line-height: 1.5;">
-          I'm <strong style="color: violet;">Dev Patra</strong>, an 
-          <strong style="color: violet;">Integrated Mtech </strong> (B.Tech + M.Tech) Chemical Engineering student from 
-          <strong style="color: violet;">ICT Mumbai</strong> who loves solving problems using Tech.
-          <br /><br />
-          – <strong style> Current CGPA </strong></strong><strong style="color: violet;">- 9.9/10</strong> (Upto 12 Trimester) <br>
-          – Completed <strong style="color: violet;">6 In-Plant Internships</strong> (incl. DOW, DRDO, RPDS)<br>
-          – Contributed to <strong style="color: violet;">4 International publications</strong> as first author, including a Book chapter (Elsevier)<br>
-          – Presented research at the <strong style="color: violet;">ICMLDE 2024 Conference</strong><br>
-          – Developer of the <strong style="color: violet;">NAMoSTe software</strong> (Copyrighted, Govt. of India)
-        </p>
-
-
-
-        <!-- Gallery Section -->
-        <div class="gallery-section" data-aos="fade-up" data-aos-delay="500">
-          <h3 class="gallery-heading">Gallery</h3>
+        <div class="gallery-wrap reveal">
           <div class="gallery-container">
             <div class="gallery-slide">
-              <img src="src/webp/ICMLDE.jpg" alt="Gallery Image 1">
-              <img src="src/webp/AAKRITI.jpg" alt="Gallery Image 2">
-              <img src="src/webp/you.jpg" alt="Gallery Image 3">
-              <img src="src/webp/DOW1.jpg" alt="Gallery Image 4">
-              <img src="src/webp/DOW2.jpg" alt="Gallery Image 5">
+              <img src="src/webp/ICMLDE.jpg" alt="ICMLDE Conference" />
+              <img src="src/webp/AAKRITI.jpg" alt="AAKRITI event" />
+              <img src="src/webp/you.jpg" alt="Dev Patra" />
+              <img src="src/webp/DOW1.jpg" alt="DOW internship" />
+              <img src="src/webp/DOW2.jpg" alt="DOW internship" />
             </div>
           </div>
-        </div>
-
-        <style>
-        .gallery-section {
-          text-align: center;
-          margin: 40px auto;
-        }
-
-        .gallery-heading {
-          color: white;
-          font-size: 1.8rem;
-          font-weight: bold;
-          margin-bottom: 15px;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-        }
-
-        .gallery-container {
-          width: 90vw;
-          aspect-ratio: 1 / 1;
-          max-width: 400px;
-          margin: 0 auto;
-          overflow: hidden;
-          border-radius: 20px;
-          box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-          position: relative;
-        }
-
-        .gallery-slide {
-          display: flex;
-          width: 100%; /* 5 images → 500% */
-          height: 100%;
-          animation: slide 25s infinite ease-in-out; /* smoother & slower */
-        }
-
-        .gallery-slide img {
-          width: 100%;
-          height: 100%;
-          flex-shrink: 0;
-          object-fit: cover; /* fills the square fully */
-          border-radius: 20px;
-          transition: transform 0.6s ease;
-        }
-
-        .gallery-slide img:hover {
-          transform: scale(1.05); /* zoom effect on hover */
-        }
-
-        /* Sliding keyframes */
-        @keyframes slide {
-          0%, 15%   { transform: translateX(0); }
-          20%, 35%  { transform: translateX(-100%); }
-          40%, 55%  { transform: translateX(-200%); }
-          60%, 75%  { transform: translateX(-300%); }
-          80%, 100% { transform: translateX(-400%); }
-        }
-        </style>
-
-
-
-
-
-        
-        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="200">
-          <a href="mailto:patradev77@gmail.com" tabindex="-1">
-            <button class="letsTalkBtn">
-              <p class="letsTalkBtn-text">Let's Talk!</p>
-              <span class="letsTalkBtn-BG"></span>
-            </button></a>
-          <div class="setting-container" id="setting-container">
-            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
-              aria-label="settings for sound and appearance"></label>
-
-            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
-              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-                aria-label="switch appearance"></label>
-            </div>
-
-            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
-              <input type="checkbox" id="switchforsound" onclick="playpause()" />
-              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-                class="needtobeinvert"></label>
-            </div>
-          </div>
-          <!-- setting div ends -->
-        </div>
-        <!-- contact-btn-div -->
-      </div>
-     
-    </section>
-
-
-    <!-- landing page ends here -->
-    <style>
-      .highlight {
-        font-weight: bold;
-        color: #9b59b6; /* Customize this to match your theme */
-      }
-    </style>
-    
-    <section class="about-section-container" id="about" data-aos="fade-up">
-      <div class="about-section">
-        <div class="section-heading">
-          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
-            &#60;/AboutMe&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-    
-    <div class="info-dp-section">
-      <div class="about-info" style="line-height: 1.6; font-size: 0.95rem;">
-        <p tabindex="0">
-          <!-- <strong>First Deployed Application:</strong> I developed and deployed my first interactive application on 
-          <span class="highlight">Heat Exchanger Design (Kern’s Method)</span>.  
-          <br />You can try it out here 👉 
-          <a href="https://kernsmethod-devpatra.streamlit.app/" target="_blank" rel="noopener noreferrer" 
-             style="color: #1E90FF; font-weight: 500; font-style: italic; text-decoration: underline;">
-           <br /> Heat Exchanger Design App
-          </a>.
-        </p>
-        <br /> -->
-        <p tabindex="0">
-          <strong>Beyond Academics:</strong> I'm a <span class="highlight">State-level Table Tennis</span> player and enjoy <span class="highlight">Chess</span> — keeping me occupied in my free time.
-        </p>
-        <br />
-        <p tabindex="0">
-          <strong>Web Design Head & Treasurer – AAKRITI 1.0:</strong> Led the <span class="highlight">Web team</span> to build an interactive platform, while managing <span class="highlight">Event finances</span> & execution.
-        </p>
-        <br />
-        <p tabindex="0">
-          <strong>Editor – MARJAL (ICT Mumbai, MARJ Campus):</strong> Edited and curated content for <span class="highlight">MARJAL</span>, the institute’s biannual magazine, overseeing a team of writers for two years.
-        </p>
-
-
-
-    
-            <!-- Resume button -->
-            <button class="resume-btn" id="resume-btn" onclick="openURL()">
-              <div class="sign">
-                <svg viewBox="0 0 640 512">
-                  <path
-                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-                </svg>
-              </div>
-              <div class="text">Resume</div>
-            </button>
-          </div>
-    
-          <div class="dp" data-aos="fade-up">
-            <img src="src/webp/devp.jpeg" alt="Dev Patra" tabindex="0" aria-label="Image of Dev Patra" />
-          </div>
+          <div class="gallery-caption">gallery — conferences, internships &amp; moments</div>
         </div>
       </div>
-    </section>
-    <!-- about section ends  -->
-
-    <section class="skills-section-container" id="skills">
-      <div class="skills-section">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            &#60;/Skills&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-
-        <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
-            aria-label="As a frontend a developer these are the skills i have">
-            Tech Stack
-          </h3>
-          <ul class="tech-stack-wrapper">
-
-
-            <!-- <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/bootstraplogo.png" alt="bootstrap skill" class="tech-stack-logo" />
-              <span class="tooltip">BOOTSTRAP</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" />
-              <span class="tooltip">REACTJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/nextlogo.png" alt="nextjs skill" class="tech-stack-logo" />
-              <span class="tooltip">NEXTJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/node.png" alt="nodejs skill" class="tech-stack-logo" />
-              <span class="tooltip">NODEJS</span>
-            </li> -->
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/python.png" alt="Python skill" class="tech-stack-logo" />
-              <span class="tooltip">Python</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
-              <span class="tooltip">GIT</span>
-            </li>
-
-            <!-- <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/tinacms.png" alt="tinacms skill" class="tech-stack-logo" />
-              <span class="tooltip">TINACMS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/contentfulcms.png" alt="contentful skill" class="tech-stack-logo" />
-              <span class="tooltip">CONTENTFUL</span>
-            </li> -->
-
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/clogo.png" alt="c language skill" class="tech-stack-logo" />
-              <span class="tooltip">C</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/cpplogo.png" alt="c++ language skill" class="tech-stack-logo" />
-              <span class="tooltip">C++</span>
-            </li>
-
-            <!-- <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/pslogo.png" alt="photoshop skill" class="tech-stack-logo" />
-              <span class="tooltip">ADOBE PS</span>
-            </li> -->
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/figmalogo.png" alt="figma skill" class="tech-stack-logo" />
-              <span class="tooltip">FIGMA</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">HTML</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
-              <span class="tooltip">CSS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
-              <span class="tooltip">JS</span>
-            </li>
-
-            <!-- <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/ailogo.png" alt="adobe illustrator skill" class="tech-stack-logo" />
-              <span class="tooltip">ADOBE AI</span>
-            </li> -->
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <style>
-      .research-item {
-        margin-bottom: 1.5rem; /* Line gap between papers */
-        text-align: left;      /* Align text to the left */
-      }
-    
-      .about-info {
-        text-align: left;      /* Align all inside content to left */
-        padding-left: 1rem;    /* Slight indent from the container */
-      }
-    
-      .research-item a {
-        color: #9b59b6; /* Violet link color */
-        text-decoration: underline;
-      }
-    
-      .section-heading-article {
-        text-align: left;
-      }
-    </style>
-    
-    <section class="about-section-container" id="Research" data-aos="fade-up">
-      <div class="about-section">
-        <div class="section-heading">
-          <h2 class="section-heading-article" tabindex="0" aria-label="Research heading">
-            &#60;/Research Papers, Conferences & IPs&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-    
-        <!-- <div class="info-dp-section"> -->
-          <div class="about-info">
-            <!-- <div class="research-item"> -->
-              <p tabindex="0">
-                
-                <b>5. NAMoSTe – <i>Novel Atomic & Molecular Structure Explorer</i></b><br>
-<small>(Intellectual Property Secured; Registered with the Copyright Office, Government of India – Extracts from the Official Register of Copyrights)</small><br><br>
-
-                NAMoSTe is a next-generation software designed for the intuitive creation and visualization of complex long-chain polymers in 1D, 2D, and 3D. While helping advanced molecular modeling capabilities, it empowers researchers to precisely construct and analyze polymer architectures, making it an essential tool for innovation in computational chemistry and materials science. <br> <br>
-                <!-- <a href="https://drive.google.com/file/d/1nZF84tSLiOUE2OaIKPoqKoCkzDL5Bjoa/view?usp=sharing" target="_blank"><i>Conference Certificate</i></a> -->
-              </p>
-    
-            <div class="research-item">
-              <p tabindex="0">
-                <b>4. International Conference on Machine Learning &amp; Data Science (ICMLDE Conference 2025, Dehradun, India):</b><br>
-                Predictive Modelling of Heavy Metal Water Pollutant Removal Using Biochar: A Comparative Study of Neural Networks and Machine Learning Techniques.<br>
-                <a href="https://drive.google.com/file/d/1_EJBJuhth9bjs-XoFsU7i7kgS032EFLR/view?usp=sharing" target="_blank"><i>Conference Certificate</i></a>
-              </p>
-            </div>
-    
-            <div class="research-item">
-              <p tabindex="0">
-                <b>3. Book Chapter (2025):</b><br>
-                Deep eutectic solvents in the dissolution of lanthanides and actinides and recovery of value-added materials from electronic waste <i>[Elsevier]</i>.<br>
-                <a href="https://doi.org/10.1016/B978-0-443-21962-7.00012-2" target="_blank"><i>View Book Chapter</i></a>
-              </p>
-            </div>
-    
-            <div class="research-item">
-              <p tabindex="0">
-                <b>2. Industrial &amp; Engineering Chemistry Research (2024):</b><br>
-                Systematic Exploration of COSMO-SAC-PDH and EXT-UNIQUAC-PDH* Models for Rare-Earth Element Leaching in Deep Eutectic Solvents <i>[Industrial & Engineering Chemistry, ACS]</i>.<br>
-                <a href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.3c03872" target="_blank"><i>View Online</i></a>
-              </p>
-            </div>
-    
-            <div class="research-item">
-              <p tabindex="0">
-                <b>1. Solvent Extraction and Ion Exchange (2023):</b><br>
-                Generalized Pitzer-Debye-Hückel (PDH) framework for the deep eutectic solvent assisted extraction of europium (III), americium (III), and uranium (VI) <i>[Solvent Extraction and Ion Exchange, Taylor and Francis]</i>.<br>
-                <a href="https://www.tandfonline.com/doi/full/10.1080/07366299.2023.2293688" target="_blank"><i>View Online</i></a>
-              </p>
-            </div>
-    
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    
-<!-- About section ends -->
-
-
-
-    
-<!-- skills section ends -->
-<section class="Experience-section-container" id="Experience">
-  <div class="Experience-section-div">
-    <div class="section-heading" data-aos="fade-up">
-      <h2 class="section-heading-article" tabindex="0" aria-label="My Experience starts from here">
-        &#60;/Experience&#62;
-      </h2>
-      <p class="sectionHeadingP"></p>
     </div>
+  </section>
 
-    <div class="project-boxes-div">
-      <div data-aos="fade-up" class="project-box-wrapper">
-        <div class="project-box project-box5" id="project-box5">
-          <div class="info-div">
-            <article class="ProjectHeading">RPDS Innovations Pvt Ltd.</article>
-            <p class="ProjectDescription">
-              - Achieved <strong style="color: violet;">40% faster process stabilization in industrial polymerization reactor</strong> using NN-MPC (Neural Network Model Predictive Control), MPC, in comparison to PID.<br><br>
-              - Optimized PID, reducing <strong style="color: violet;">setpoint settling by 70%</strong>.<br><br>
-              - Built <strong style="color: violet;">Web Application</strong> using Streamlit (Python) for automating the workflows.<br><br>
-              - Identified <strong style="color: violet;">20 TEP faults (fault detection with advanced analytics)</strong> using AI & ML.<br><br>
-            </p>
+  <section id="research" class="tint-teal">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">02 · Published work</span>
+        <h2>Research papers, conferences &amp; IPs</h2>
+      </div>
 
-            <div class="project-buttons">
-              <a href="https://www.linkedin.com/company/rpdsinnovations/posts/?feedView=all" target="_blank" class="cta"
-                aria-label="Visit RPDS on LinkedIn">
-                <span>View RPDS</span>
-                <svg viewBox="0 0 13 10" height="11px" width="5px">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-              </a>
+      <div class="timeline reveal">
+
+        <div class="tl-item">
+          <div class="tl-num">05</div>
+          <div>
+            <span class="badge">Copyrighted · Govt. of India</span>
+            <h3>NAMoSTe — Novel Atomic &amp; Molecular Structure Explorer</h3>
+            <p>A next-generation software for intuitive creation and visualization of complex long-chain polymers in 1D, 2D and 3D — an essential tool for computational chemistry and materials science research.</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">04</div>
+          <div>
+            <span class="tl-meta">ICMLDE Conference 2025 · Dehradun, India</span>
+            <h3>Predictive modelling of heavy-metal water pollutant removal using biochar</h3>
+            <p>A comparative study of neural networks and machine-learning techniques.</p>
+            <a class="tl-link" href="https://drive.google.com/file/d/1_EJBJuhth9bjs-XoFsU7i7kgS032EFLR/view?usp=sharing" target="_blank" rel="noopener noreferrer">View conference certificate →</a>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">03</div>
+          <div>
+            <span class="tl-meta">Book chapter · 2025 · Elsevier</span>
+            <h3>Deep eutectic solvents in the dissolution of lanthanides and actinides</h3>
+            <p>Recovery of value-added materials from electronic waste.</p>
+            <a class="tl-link" href="https://doi.org/10.1016/B978-0-443-21962-7.00012-2" target="_blank" rel="noopener noreferrer">View book chapter →</a>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">02</div>
+          <div>
+            <span class="tl-meta">Industrial &amp; Engineering Chemistry Research · 2024 · ACS</span>
+            <h3>Systematic exploration of COSMO-SAC-PDH and EXT-UNIQUAC-PDH models</h3>
+            <p>For rare-earth element leaching in deep eutectic solvents.</p>
+            <a class="tl-link" href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.3c03872" target="_blank" rel="noopener noreferrer">View online →</a>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">01</div>
+          <div>
+            <span class="tl-meta">Solvent Extraction and Ion Exchange · 2023 · Taylor &amp; Francis</span>
+            <h3>Generalized Pitzer-Debye-Hückel (PDH) framework</h3>
+            <p>For the deep eutectic solvent-assisted extraction of europium(III), americium(III), and uranium(VI).</p>
+            <a class="tl-link" href="https://www.tandfonline.com/doi/full/10.1080/07366299.2023.2293688" target="_blank" rel="noopener noreferrer">View online →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="tint-amber">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">03 · On the job</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="reveal">
+        <div class="exp-card">
+          <div class="exp-body">
+            <div class="exp-content">
+              <div class="exp-head">
+                <h3>RPDS Innovations Pvt Ltd.</h3>
+                <div class="exp-sub">Industrial control &amp; process automation</div>
+              </div>
+              <ul>
+                <li>Achieved <strong>40% faster process stabilization</strong> in an industrial polymerization reactor using NN-MPC (Neural Network Model Predictive Control), compared to PID.</li>
+                <li>Optimized PID, reducing <strong>setpoint settling by 70%</strong>.</li>
+                <li>Built a <strong>web application</strong> using Streamlit (Python) to automate workflows.</li>
+                <li>Identified <strong>20 TEP faults</strong> using AI &amp; ML–based fault detection.</li>
+              </ul>
+              <a class="exp-link" href="https://www.linkedin.com/company/rpdsinnovations/posts/?feedView=all" target="_blank" rel="noopener noreferrer">View RPDS on LinkedIn →</a>
+            </div>
+            <div class="exp-photo">
+              <img src="src/webp/RPDS_img.jpg" alt="RPDS Innovations internship" />
             </div>
           </div>
+        </div>
 
-          <div class="image-div">
-            <img src="src/webp/RPDS_img.jpg" alt="RPDS preview image">
+        <div class="exp-card">
+          <div class="exp-body">
+            <div class="exp-content">
+              <div class="exp-head">
+                <h3>Defence Institute of Advanced Technology (DRDO), Pune</h3>
+                <div class="exp-sub">Sustainable Transformation Management Research Group</div>
+              </div>
+              <ul>
+                <li>Presented a paper at the <strong>International Conference on Machine Learning and Data Engineering (ICMLDE 3.0)</strong>.</li>
+                <li>Interned under <strong>Dr. Amrita Nighojkar</strong>.</li>
+              </ul>
+              <a class="exp-link" href="https://sites.google.com/view/amrita-nighojkar/home?authuser=1" target="_blank" rel="noopener noreferrer">View Dr. Amrita Nighojkar →</a>
+            </div>
+            <div class="exp-photo">
+              <img src="src/webp/DIAT_Intern.jpeg" alt="DIAT DRDO internship" />
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-body">
+            <div class="exp-content">
+              <div class="exp-head">
+                <h3>Bombay Technologist</h3>
+                <div class="exp-sub">Moltherm Research Group</div>
+              </div>
+              <ul>
+                <li>Published <strong>2 international publications</strong> on thermodynamic modelling, plus a <strong>book chapter</strong>.</li>
+                <li>Interned under <strong>Dr. Debashis Kundu</strong>.</li>
+              </ul>
+              <a class="exp-link" href="https://sites.google.com/view/debashiskundu" target="_blank" rel="noopener noreferrer">View Moltherm Research Group →</a>
+            </div>
+            <div class="exp-photo exp-photo-logo">
+              <img src="src/png/bombay_technologist_logo.png" alt="Bombay Technologist logo" />
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">04 · Tools of the trade</span>
+        <h2>Tech stack</h2>
+      </div>
+
+      <div class="tiles reveal">
+        <div class="tile"><span class="num">01</span><span class="sym">Py</span><span class="name">Python</span></div>
+        <div class="tile"><span class="num">02</span><span class="sym">C</span><span class="name">C</span></div>
+        <div class="tile"><span class="num">03</span><span class="sym">C++</span><span class="name">C++</span></div>
+        <div class="tile"><span class="num">04</span><span class="sym">Gh</span><span class="name">GitHub</span></div>
+        <div class="tile"><span class="num">05</span><span class="sym">Gt</span><span class="name">Git</span></div>
+        <div class="tile"><span class="num">06</span><span class="sym">Fg</span><span class="name">Figma</span></div>
+        <div class="tile"><span class="num">07</span><span class="sym">Ht</span><span class="name">HTML</span></div>
+        <div class="tile"><span class="num">08</span><span class="sym">Cs</span><span class="name">CSS</span></div>
+        <div class="tile"><span class="num">09</span><span class="sym">Js</span><span class="name">JavaScript</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-quote">"Learning, <span class="accent">Living</span>, and Leveling Up."</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/devpatra07/?hl=en" target="_blank" aria-label="Instagram"><svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+        <a href="https://www.linkedin.com/in/dev-patra-78711a223/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+        <a href="https://github.com/devpatra07" target="_blank" aria-label="GitHub"><svg viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+        <a href="mailto:patradev77@gmail.com" aria-label="Email"><svg viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Design &amp; built by Dev Patra © twentytwentysix</span>
+      <a href="#home" class="back-top mono">↑ back to top</a>
     </div>
   </div>
-<!-- </section>
+</footer>
 
-<style>
-.image-div {
-  width: 100%;          /* full width of parent */
-  max-width: 400px;     /* keeps image from getting too large */
-  margin: 15px auto;    /* center inside the box */
-}
-
-.image-div img {
-  width: 100%;          /* responsive scaling */
-  height: auto;         /* keep aspect ratio */
-  object-fit: contain;  /* show full image without cropping */
-  display: block;
-  border-radius: 8px;   /* optional styling */
-}
-</style> -->
-
-
-<!-- DIAT Project -->
-<div class="project-box-wrapper" data-aos="fade-up">
-  <div class="project-box project-box5" id="project-box5">
-    <div class="info-div">
-      <article class="ProjectHeading">DEFENCE INSTITUTE OF ADVANCED TECHNOLOGY (DRDO), PUNE</article>
-      <p class="ProjectDescription">
-        - Presented a paper in <strong style="color: violet;">International conference on Machine Learning and Data Engineering (ICMLDE 3.0)</strong>.<br><br>
-        -  Intern at Sustainable Transformation Management Research group <strong style="color: violet;"></strong> under <strong style="color: violet;">Dr. Amrita Nighojkar</strong>
-      </p>
-      <div class="project-buttons">
-        <a href="https://sites.google.com/view/amrita-nighojkar/home?authuser=1" target="_blank" class="cta" aria-label="Visit Comickaze live">
-          <span>View Dr. Amrita Nighojkar</span>
-          <svg viewBox="0 0 13 10" height="10px" width="15px">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="image-div">
-      <img src="src/webp/DIAT_Intern.jpeg" alt="Aquaregia website preview image" />
-    </div>
-  </div>
-</div>
-
-<!-- Bombay Technologist Project -->
-<div class="project-box-wrapper" data-aos="fade-up">
-  <div class="project-box project-box2" id="project-box2">
-    <div class="info-div">
-      <img src="src/svg/aquaregia-favicon.svg" alt="Aquaregia website favicon" class="faviconforProjectAquaregia" />
-      <article class="ProjectHeading">BOMBAY TECHNOLOGIST</article>
-      <p class="ProjectDescription">
-        - Published <strong style="color: violet;">2 International Publications </strong> on <strong style="color: violet;">Thermodynamic modelling</strong> and a <strong style="color: violet;">Book chapter</strong>:<br><br>
-        -  Intern at Moltherm Research group <strong style="color: violet;"></strong> under <strong style="color: violet;">Dr. Debashis Kundu</strong>
-      </p>
-      <div class="project-buttons">
-        <a href="https://sites.google.com/view/debashiskundu" target="_blank" class="cta" aria-label="Visit Aquaregia Live">
-          <span>View Moltherm Research Group</span>
-          <svg viewBox="0 0 13 10" height="10px" width="15px">
-            <path d="M1,5 L11,5"></path>
-            <polyline points="8 1 12 5 8 9"></polyline>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="image-div">
-      <img src="src/png/bombay_technologist_logo.png" alt="Aquaregia website preview image" />
-    </div>
-  </div>
-</div>
-<!-- ✨ Added CSS for whiter text -->
-<style>
-.Experience-section-container {
-  color: rgba(255, 255, 255, 0.9); /* nearly white text */
-}
-
-.Experience-section-container .ProjectHeading,
-.Experience-section-container .ProjectDescription,
-.Experience-section-container .section-heading-article,
-.Experience-section-container a span {
-  color: rgba(255, 255, 255, 0.95); /* strong white tone */
-}
-
-/* Optional: make link text glow slightly on hover */
-.Experience-section-container a:hover span {
-  color: white;
-  text-shadow: 0 0 5px violet;
-}
-</style>
-          ----------------------
-          <!-- <div class="project-box-wrapper" data-aos="fade-up">
-            <div class="project-box project-box4" id="project-box4">
-              <div class="info-div">
-                <img src="src/webp/qr-favicon.webp" alt="Qr generator website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">QR Generator</article>
-                <p class="ProjectDescription">
-                  A webpage to make a QR Code from text using API.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/devpatra07/QR-Generator" target="_blank" class="github-redirect"
-                    aria-label="Visit qr generator on github">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://devpatra07.github.io/QR-Generator/" target="_blank" class="cta"
-                    aria-label="Visit qr generator live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/QRgeneratorProject.webp" alt="qr generator website preview image" />
-              </div>
-            </div>
-          </div> -->
-
-          <!-- ---------------------- -->
-          <!-- <div class="project-box-wrapper" data-aos="fade-up">
-            <div class="project-box project-box3" id="project-box3">
-              <div class="info-div">
-                <img src="src/ico/netflixfavicon.ico" alt="netflix website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">React Netflix Clone</article>
-                <p class="ProjectDescription">
-                  A webpage to categorize the shows to redirect user to watch
-                  the show.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/devpatra07/Netflix-clone" target="_blank" class="github-redirect"
-                    aria-label="Visit Netflix clone on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://react-project-20.netlify.app/" target="_blank" class="cta"
-                    aria-label="Visit netflix clone live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/NetflixCloneProject.webp" alt="netflix clone website preview image" />
-              </div>
-            </div>
-          </div> -->
-
-          <!-- ---------------------- -->
-
-          <!-- <div class="project-box-wrapper" data-aos="fade-up">
-            <div class="project-box project-box1" id="project-box1">
-              <div class="info-div">
-                <img src="src/webp/axocean-favicon.webp" alt="Axocean website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">AXOCEAN</article>
-                <p class="ProjectDescription">
-                  E-commerce website frontend work to choose people their
-                  favorite design of product and redirect to flipkart shopping
-                  site.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/devpatra07/AXOCEAN" target="_blank" class="github-redirect"
-                    aria-label="Visit axocean on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://devpatra07.github.io/AXOCEAN/" target="_blank" class="cta"
-                    aria-label="Visit axocean live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/AXOCEAN-project.webp" alt="Axocean website preview image" />
-              </div>
-            </div>
-          </div> -->
-          <!-- ---------------------- -->
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- main ends here -->
-
-  <footer id="footer">
-    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
-    </button>
-    <div class="footer-background">
-      <div class="footer-blob"></div>
-    </div>
-    <div class="footer-foreground">
-      <div class="footercontainer">
-        <div class="two-words">
-          <article tabindex="0" aria-label="Learning, Living, and Leveling Up, my quote">
-            "Learning, Living, and Leveling Up."
-          </article>
-        </div>
-        <div class="social-media-container">
-          <div class="getintouch-heading">
-            <article>GetinTouch();</article>
-          </div>
-          <div class="logos">
-            <a href="https://www.instagram.com/devpatra07/?hl=en" target="_blank" tabindex="0"
-              aria-label="My instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
-                <path
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-              </svg></a>
-
-            <a href="https://www.linkedin.com/in/dev-patra-78711a223/" target="_blank"
-              aria-label="My Linkdin"><svg class="SocialHandle" viewBox="0 0 448 512">
-                <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-              </svg></a>
-
-            <a href="https://github.com/devpatra07" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
-                class="SocialHandle">
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-              </svg></a>
-
-            <a href="mailto:patradev77@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
-                viewBox="0 0 512 512">
-                <path
-                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="footer-avatar-container">
-          <img src="src/png/footer-avatar-vinod.png" alt="animation-head" class="footer-avatar-img" id="footer-wala-avatar"/>
-          <div class="footer-avatar-face">
-            <div class="footer-avatar-eye footer-left-eye">
-              <div class="footer-pupil"></div>
-            </div>
-            <div class="footer-avatar-eye footer-right-eye">
-              <div class="footer-pupil"></div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <article>
-            Design & Built by Dev Patra
-            &#169; twentytwentyfive
-          </article>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- footer ends here -->
-
-  <script src="main.js"></script>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <script>
-    function openURL() {
-      var url = "src/pdf/CV_Dev_Patra1.pdf";
-
-      window.open(url, "_blank");
-    }
-  </script>
-
-  <script>
-    const cursorInner = document.getElementById("cursor-inner");
-    const cursorOuter = document.getElementById("cursor-outer");
-    const links = document.querySelectorAll("a,label,button");
-
-    document.addEventListener("mousemove", function (e) {
-      const posX = e.clientX;
-      const posY = e.clientY;
-
-      cursorInner.style.left = `${posX}px`;
-      cursorInner.style.top = `${posY}px`;
-
-      // cursorOuter.style.left = `${posX}px`;
-      // cursorOuter.style.top = `${posY}px`;
-
-      cursorOuter.animate(
-        {
-          left: `${posX}px`,
-          top: `${posY}px`,
-        },
-        { duration: 500, fill: "forwards" }
-      );
-
-      links.forEach((link) => {
-        link.addEventListener("mouseenter", () => {
-          cursorInner.classList.add("hover");
-          cursorOuter.classList.add("hover");
-        });
-        link.addEventListener("mouseleave", () => {
-          cursorInner.classList.remove("hover");
-          cursorOuter.classList.remove("hover");
-        });
-      });
-    });
-  </script>
- <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 <script>
-  kofiWidgetOverlay.draw('devpatra07', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#794bc4',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
-</body>
+  function openURL(){
+    window.open("src/pdf/CV_Dev_Patra1.pdf", "_blank");
+  }
 
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
 </html>

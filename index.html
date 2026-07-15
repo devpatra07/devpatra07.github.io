@@ -10,6 +10,7 @@
 <meta property="og:title" content="Dev Patra | ICT Mumbai" />
 <meta property="og:description" content="Chemical Engineer & Pythonist — research, industrial internships, and software." />
 <title>Dev Patra · Chemical Engineer &amp; Pythonist</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236d4bf2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='white'%3EDP%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -331,6 +332,13 @@
   .reveal.show{ opacity:1; transform:none; }
 
   a:focus-visible, button:focus-visible{ outline:2px solid var(--teal); outline-offset:3px; }
+
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--violet),var(--teal));color:#fff;font:700 1.1rem 'Space Grotesk';box-shadow:0 8px 20px rgba(109,75,242,.25)}
+.brand-info{display:flex;flex-direction:column}
+.brand-name{font:700 1.05rem 'Space Grotesk';color:var(--text)}
+.brand-role{font-size:.72rem;color:var(--muted)}
+
 </style>
 </head>
 
@@ -338,12 +346,15 @@
 
 <header>
   <nav class="nav">
-    <div class="brand"><span class="mono accent">&lt;/</span>Dev Patra<span class="dot mono">;</span></div>
+    <div class="brand">
+<div class="brand-logo">DP</div>
+<div class="brand-info"><span class="brand-name">Dev Patra</span><span class="brand-role">Chemical Engineer &amp; Pythonist</span></div>
+</div>
     <ul class="navlinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
     <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
@@ -353,8 +364,8 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#research">Research</a>
     <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
     <a href="#skills">Skills</a>
   </div>
 </header>
@@ -407,25 +418,48 @@
 
       <div class="about-grid">
         <ul class="about-list reveal">
-          <li>
-            <div class="ico">TT</div>
-            <div><b>Beyond academics —</b>
-              <p>State-level Table Tennis player, and I enjoy Chess in my free time.</p>
-            </div>
-          </li>
-          <li>
-            <div class="ico">Web</div>
-            <div><b>Web Design Head &amp; Treasurer, AAKRITI 1.0 —</b>
-              <p>Led the web team to build an interactive event platform, while managing event finances and execution.</p>
-            </div>
-          </li>
-          <li>
-            <div class="ico">Ed</div>
-            <div><b>Editor, MARJAL (ICT Mumbai, MARJ Campus) —</b>
-              <p>Edited and curated content for the institute's biannual magazine, overseeing a team of writers for two years.</p>
-            </div>
-          </li>
-        </ul>
+
+  <li>
+    <div class="ico">🏆</div>
+    <div>
+      <b>Dr. Tobias Rosenthal Best Student Award (2026)</b>
+      <p>Recipient of Baerlocher India's national award recognizing outstanding academic excellence.</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="ico">🥈</div>
+    <div>
+      <b>Dow Inc. – 2nd Place</b>
+      <p>Awarded for the internship project on Life Cycle Assessment (LCA) in the chemical industry.</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="ico">TT</div>
+    <div>
+      <b>Beyond academics —</b>
+      <p>State-level Table Tennis player, and I enjoy Chess in my free time.</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="ico">Web</div>
+    <div>
+      <b>Web Design Head &amp; Treasurer, AAKRITI 1.0 —</b>
+      <p>Led the web team to build an interactive event platform, while managing event finances and execution.</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="ico">Ed</div>
+    <div>
+      <b>Editor, MARJAL (ICT Mumbai, MARJ Campus) —</b>
+      <p>Edited and curated content for the institute's biannual magazine, overseeing a team of writers for two years.</p>
+    </div>
+  </li>
+
+</ul>
 
         <div class="gallery-wrap reveal">
           <div class="gallery-container">
@@ -443,72 +477,10 @@
     </div>
   </section>
 
-  <section id="research" class="tint-teal">
+<section id="experience" class="tint-amber">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="section-tag">02 · Published work</span>
-        <h2>Research papers, conferences &amp; IPs</h2>
-      </div>
-
-      <div class="timeline reveal">
-
-        <div class="tl-item">
-          <div class="tl-num">05</div>
-          <div>
-            <span class="badge">Copyrighted · Govt. of India</span>
-            <h3>NAMoSTe — Novel Atomic &amp; Molecular Structure Explorer</h3>
-            <p>A next-generation software for intuitive creation and visualization of complex long-chain polymers in 1D, 2D and 3D — an essential tool for computational chemistry and materials science research.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-num">04</div>
-          <div>
-            <span class="tl-meta">ICMLDE Conference 2025 · Dehradun, India</span>
-            <h3>Predictive modelling of heavy-metal water pollutant removal using biochar</h3>
-            <p>A comparative study of neural networks and machine-learning techniques.</p>
-            <a class="tl-link" href="https://drive.google.com/file/d/1_EJBJuhth9bjs-XoFsU7i7kgS032EFLR/view?usp=sharing" target="_blank" rel="noopener noreferrer">View conference certificate →</a>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-num">03</div>
-          <div>
-            <span class="tl-meta">Book chapter · 2025 · Elsevier</span>
-            <h3>Deep eutectic solvents in the dissolution of lanthanides and actinides</h3>
-            <p>Recovery of value-added materials from electronic waste.</p>
-            <a class="tl-link" href="https://doi.org/10.1016/B978-0-443-21962-7.00012-2" target="_blank" rel="noopener noreferrer">View book chapter →</a>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-num">02</div>
-          <div>
-            <span class="tl-meta">Industrial &amp; Engineering Chemistry Research · 2024 · ACS</span>
-            <h3>Systematic exploration of COSMO-SAC-PDH and EXT-UNIQUAC-PDH models</h3>
-            <p>For rare-earth element leaching in deep eutectic solvents.</p>
-            <a class="tl-link" href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.3c03872" target="_blank" rel="noopener noreferrer">View online →</a>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-num">01</div>
-          <div>
-            <span class="tl-meta">Solvent Extraction and Ion Exchange · 2023 · Taylor &amp; Francis</span>
-            <h3>Generalized Pitzer-Debye-Hückel (PDH) framework</h3>
-            <p>For the deep eutectic solvent-assisted extraction of europium(III), americium(III), and uranium(VI).</p>
-            <a class="tl-link" href="https://www.tandfonline.com/doi/full/10.1080/07366299.2023.2293688" target="_blank" rel="noopener noreferrer">View online →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="tint-amber">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">03 · On the job</span>
+        <span class="section-tag">02 · On the job</span>
         <h2>Experience</h2>
       </div>
 
@@ -575,10 +547,76 @@
     </div>
   </section>
 
+  
+
+<section id="research" class="tint-teal">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-tag">03 · Published work</span>
+        <h2>Research papers, conferences &amp; IPs</h2>
+      </div>
+
+      <div class="timeline reveal">
+
+        <div class="tl-item">
+          <div class="tl-num">05</div>
+          <div>
+            <span class="badge">Copyrighted · Govt. of India</span>
+            <h3>NAMoSTe — Novel Atomic &amp; Molecular Structure Explorer</h3>
+            <p>A next-generation software for intuitive creation and visualization of complex long-chain polymers in 1D, 2D and 3D — an essential tool for computational chemistry and materials science research.</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">04</div>
+          <div>
+            <span class="tl-meta">ICMLDE Conference 2025 · Dehradun, India</span>
+            <h3>Predictive modelling of heavy-metal water pollutant removal using biochar</h3>
+            <p>A comparative study of neural networks and machine-learning techniques.</p>
+            <a class="tl-link" href="https://drive.google.com/file/d/1_EJBJuhth9bjs-XoFsU7i7kgS032EFLR/view?usp=sharing" target="_blank" rel="noopener noreferrer">View conference certificate →</a>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">03</div>
+          <div>
+            <span class="tl-meta">Book chapter · 2025 · Elsevier</span>
+            <h3>Deep eutectic solvents in the dissolution of lanthanides and actinides</h3>
+            <p>Recovery of value-added materials from electronic waste.</p>
+            <a class="tl-link" href="https://doi.org/10.1016/B978-0-443-21962-7.00012-2" target="_blank" rel="noopener noreferrer">View book chapter →</a>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">02</div>
+          <div>
+            <span class="tl-meta">Industrial &amp; Engineering Chemistry Research · 2024 · ACS</span>
+            <h3>Systematic exploration of COSMO-SAC-PDH and EXT-UNIQUAC-PDH models</h3>
+            <p>For rare-earth element leaching in deep eutectic solvents.</p>
+            <a class="tl-link" href="https://pubs.acs.org/doi/abs/10.1021/acs.iecr.3c03872" target="_blank" rel="noopener noreferrer">View online →</a>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-num">01</div>
+          <div>
+            <span class="tl-meta">Solvent Extraction and Ion Exchange · 2023 · Taylor &amp; Francis</span>
+            <h3>Generalized Pitzer-Debye-Hückel (PDH) framework</h3>
+            <p>For the deep eutectic solvent-assisted extraction of europium(III), americium(III), and uranium(VI).</p>
+            <a class="tl-link" href="https://www.tandfonline.com/doi/full/10.1080/07366299.2023.2293688" target="_blank" rel="noopener noreferrer">View online →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
   <section id="skills">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="section-tag">04 · Tools of the trade</span>
+        <span class="section-tag">05 · Tools of the trade</span>
         <h2>Tech stack</h2>
       </div>
 

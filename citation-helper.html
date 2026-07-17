@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research Citation Helper</title>
+<style>
+body{font-family:Segoe UI,Arial;background:#eef4fb;margin:0}
+.wrap{max-width:1050px;margin:30px auto;padding:20px}
+.card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+h1{color:#2563eb;margin:0} p{color:#666}
+input{width:100%;padding:13px;border:1px solid #ccd;border-radius:10px;margin:8px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+button{padding:12px 18px;border:0;border-radius:10px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:15px 0}
+.meta div,.cit{background:#f8fbff;padding:12px;border-radius:10px}
+pre{white-space:pre-wrap;word-break:break-word}
+small{color:#666}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+</style></head><body>
+<div class="wrap"><div class="card">
+<h1>📚 Research Citation Helper</h1>
+<p>
+    <strong>Developed by Dev Patra</strong> &bull; A lightweight citation helper for personal research. Generate RIS, EndNote, BibTeX, and standard citation formats directly from a DOI. This project is under active development, and future updates may include bug fixes and additional features.
+</p>
+
+<b>DOI</b>
+<input id="doi" placeholder="Enter DOI (e.g. 10.xxxx/xxxxx)">
+
+<div class="row">
+<button onclick="generate()">Generate</button>
+<button onclick="resetApp()">Reset</button>
+</div>
+
+<br><b>Search by Title / Author</b>
+<input id="query" placeholder="Example: Deep eutectic solvents OR John Smith">
+<div class="row">
+<button onclick="searchCrossref()">Search Crossref</button>
+<button onclick="query.value='';results.innerHTML='';st('Search reset.')">Reset Search</button>
+</div>
+
+<div id="results"></div>
+<div id="status"></div>
+<div id="meta" class="meta"></div>
+<div id="citations"></div>
+
+</div></div>
+<script>
+let exp={};
+function st(x){status.innerHTML="<b>"+x+"</b>";}
+function authors(a,i=false){return (a||[]).map(v=>i?((v.given||"").split(" ").map(x=>x[0]+".").join(" ")+" "+(v.family||"")):((v.family||"")+", "+(v.given||""))).join(i?", ":"; ");}
+function block(t,id,val){
+return `<div class='cit'><h3>${t}</h3><pre id='${id}'>${val}</pre><div class='actions'><button onclick="copy('${id}')">Copy</button><button onclick="download('${id}','${id}')">Download</button></div></div>`;
+}
+async function generate(d){
+const doiInput=document.getElementById("doi");
+let doi=(d||doiInput.value).trim()
+.replace(/^https?:\/\/doi\.org\//,"")
+.replace(/^doi\.org\//,"");
+if(!doi)return;
+st("Fetching...");
+let r=await fetch("https://api.crossref.org/works/"+encodeURIComponent(doi));
+let m=(await r.json()).message;
+let title=(m.title||[""])[0],auth=authors(m.author),ie=authors(m.author,true),j=(m["container-title"]||[""])[0],y=m.issued?.["date-parts"]?.[0]?.[0]||"",p=m.publisher||"";
+meta.innerHTML=`<div><b>Title</b><br>${title}</div><div><b>Authors</b><br>${auth}</div><div><b>Journal</b><br>${j}</div><div><b>Publisher</b><br>${p}</div><div><b>Year</b><br>${y}</div><div><b>DOI</b><br><a target=_blank href='https://doi.org/${doi}'>${doi}</a></div>`;
+let apa=`${auth} (${y}). ${title}. ${j}. https://doi.org/${doi}`;
+let ieee=`${ie}, "${title}," ${j}, ${y}. doi:${doi}`;
+let acs=`${auth}. ${title}. ${j} ${y}.`;
+let nat=`${auth}. ${title}. ${j} (${y}).`;
+let bib=`@article{ref${y},
+title={${title}},
+author={${(m.author||[]).map(a=>(a.family||"")+", "+(a.given||"")).join(" and ")}},
+journal={${j}},
+year={${y}},
+doi={${doi}}
+}`;
+let ris=`TY  - JOUR
+TI  - ${title}
+${(m.author||[]).map(a=>"AU  - "+a.family+", "+a.given).join("\n")}
+JO  - ${j}
+PY  - ${y}
+DO  - ${doi}
+ER  -`;
+let enw=`%0 Journal Article
+${(m.author||[]).map(a=>"%A "+a.given+" "+a.family).join("\n")}
+%T ${title}
+%J ${j}
+%D ${y}
+%R ${doi}`;
+citations.innerHTML=
+block("RIS","citation.ris",ris)+
+block("EndNote","citation.enw",enw)+
+block("APA","APA.txt",apa)+
+block("IEEE","IEEE.txt",ieee)+
+block("ACS","ACS.txt",acs)+
+block("Nature","Nature.txt",nat)+
+block("BibTeX","citation.bib",bib)+
+`<div class='actions' style='margin-top:15px'><button onclick='copyAll()'>Copy All</button></div>`;
+st("Done.");
+}
+async function searchCrossref(){
+let q=query.value.trim(); if(!q)return;
+st("Searching...");
+let r=await fetch("https://api.crossref.org/works?query="+encodeURIComponent(q)+"&rows=5");
+let items=(await r.json()).message.items;
+results.innerHTML="<h3>Search Results</h3>"+items.map(x=>{
+let t=(x.title||["Untitled"])[0];
+let d=x.DOI||"";
+let a=(x.author||[]).map(v=>v.family).join(", ");
+return `<div style='padding:10px;border-bottom:1px solid #ddd'><b>${t}</b><br><small>${a}</small><br><button onclick="generate('${d}')">Use This</button></div>`;
+}).join("");
+st("Search complete.");
+}
+function copy(id){navigator.clipboard.writeText(document.getElementById(id).textContent);st("Copied.");}
+function copyAll(){navigator.clipboard.writeText([...document.querySelectorAll("pre")].map(x=>x.textContent).join("\n\n"));st("Copied all.");}
+function download(id,n){let b=new Blob([document.getElementById(id).textContent]);let a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=n;a.click();}
+function resetApp(){doi.value="";query.value="";results.innerHTML="";meta.innerHTML="";citations.innerHTML="";st("Reset.");}
+st("Ready.");
+</script>
+</body></html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Resources — tools and references from Dev Patra, including the Citation Helper." />
+<meta name="author" content="Dev Patra" />
+<title>Resources · Dev Patra</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236d4bf2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='white'%3EDP%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f6f7f9;
+    --surface-2:#eef0f3;
+    --line: rgba(31,26,58,0.10);
+    --text:#231f3d;
+    --muted:#655f7c;
+    --violet:#6d4bf2;
+    --violet-deep:#4f31d1;
+    --amber:#c9781f;
+    --teal:#0d8f83;
+    --tint-violet:#f4f1ff;
+    --tint-violet-line: rgba(109,75,242,0.14);
+    --tint-teal:#eefbf8;
+    --tint-teal-line: rgba(13,143,131,0.16);
+    --tint-amber:#fff8ee;
+    --tint-amber-line: rgba(201,120,31,0.18);
+    --radius: 14px;
+    --maxw: 1100px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 550px at 88% -8%, rgba(109,75,242,0.06), transparent 60%),
+      radial-gradient(900px 500px at 0% 8%, rgba(13,143,131,0.05), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+
+  ::selection{ background:var(--violet); color:#fff; }
+
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  /* ---------- Nav (shared with main site) ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.82);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:var(--maxw); margin:0 auto; padding:14px 24px;
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-logo{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--violet),var(--teal));color:#fff;font:700 1.1rem 'Space Grotesk';box-shadow:0 8px 20px rgba(109,75,242,.25)}
+  .brand-info{display:flex;flex-direction:column}
+  .brand-name{font:700 1.05rem 'Space Grotesk';color:var(--text)}
+  .brand-role{font-size:.72rem;color:var(--muted)}
+
+  .navlinks{
+    display:flex; gap:28px; list-style:none; margin:0; padding:0;
+    font-size:0.92rem; color:var(--muted);
+  }
+  .navlinks a{ transition:color .2s ease; position:relative; }
+  .navlinks a:hover, .navlinks a:focus-visible{ color:var(--text); }
+  .navlinks a::after{
+    content:''; position:absolute; left:0; bottom:-6px; height:1px; width:0;
+    background:var(--violet); transition:width .25s ease;
+  }
+  .navlinks a:hover::after{ width:100%; }
+  .navlinks a.active{ color:var(--text); }
+  .navlinks a.active::after{ width:100%; background:var(--violet); }
+
+  .burger{ display:none; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:8px 10px; color:var(--text); cursor:pointer; }
+  .burger span{ display:block; width:18px; height:2px; background:var(--text); margin:3px 0; transition:transform .25s ease, opacity .25s ease; }
+  .burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .burger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
+
+  .mobile-menu{
+    display:flex; flex-direction:column; gap:2px;
+    max-width:var(--maxw); margin:0 auto; padding:0 24px;
+    max-height:0; overflow:hidden; opacity:0;
+    transition:max-height .35s ease, opacity .3s ease, padding .35s ease;
+    background:var(--bg);
+  }
+  .mobile-menu.open{ max-height:420px; opacity:1; padding-bottom:16px; }
+  .mobile-menu a.active{ color:var(--violet); }
+
+  @media (max-width: 780px){
+    .navlinks{ display:none; }
+    .burger{ display:block; }
+    .mobile-menu a{
+      padding:12px 4px; border-top:1px solid var(--line); color:var(--muted); font-size:0.95rem;
+    }
+  }
+
+  /* ---------- Page header ---------- */
+  .page-hero{ padding:72px 0 48px; border-top:1px solid var(--line); }
+  .section-tag{
+    font-family:'JetBrains Mono', monospace; font-size:0.78rem; color:var(--teal);
+    letter-spacing:0.08em; text-transform:uppercase; display:block; margin-bottom:10px;
+  }
+  .page-hero h1{ font-size: clamp(2rem, 5vw, 3rem); font-weight:700; }
+  .page-hero p{ margin-top:16px; max-width:600px; color:var(--muted); font-size:1.02rem; }
+
+  /* ---------- Resource cards ---------- */
+  .resources-section{ padding:0 0 96px; }
+  .resource-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:22px; margin-top:8px;
+  }
+  .resource-card{
+    border:1px solid var(--tint-violet-line); border-radius:16px; background:#ffffff;
+    padding:28px; display:flex; flex-direction:column; gap:14px;
+    box-shadow:0 10px 26px rgba(109,75,242,0.07);
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .resource-card:hover{ transform:translateY(-4px); box-shadow:0 16px 34px rgba(109,75,242,0.14); border-color:var(--violet); }
+  .resource-icon{
+    width:46px; height:46px; border-radius:12px;
+    background:var(--tint-violet); border:1px solid var(--tint-violet-line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'JetBrains Mono', monospace; font-weight:600; color:var(--violet); font-size:1.1rem;
+  }
+  .resource-card h3{ font-size:1.1rem; font-weight:600; }
+  .resource-card p{ color:var(--muted); font-size:0.92rem; margin:0; flex-grow:1; }
+  .resource-link{
+    display:inline-flex; align-items:center; gap:6px;
+    color:var(--violet); font-size:0.9rem; font-weight:600;
+    margin-top:4px;
+  }
+  .resource-link:hover{ text-decoration:underline; }
+  .resource-card.featured{
+    border-color:var(--tint-amber-line);
+    background:linear-gradient(180deg, #ffffff, var(--tint-amber));
+  }
+  .resource-card.featured .resource-icon{
+    background:var(--tint-amber); border-color:var(--tint-amber-line); color:var(--amber);
+  }
+  .resource-card.featured .resource-link{ color:var(--amber); }
+
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--teal); outline-offset:3px; }
+
+  footer{ border-top:1px solid var(--line); padding:40px 0 30px; }
+  .footer-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.82rem; color:var(--muted);
+  }
+  .back-top:hover{ color:var(--teal); }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">DP</div>
+      <div class="brand-info"><span class="brand-name">Dev Patra</span><span class="brand-role">Chemical Engineer &amp; Pythonist</span></div>
+    </a>
+    <ul class="navlinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="resources.html" class="active">Resources</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="section-tag">06 · Tools &amp; references</span>
+      <h1>Resources</h1>
+      <p>A small collection of tools and references I've put together — starting with the Citation Helper, also linked from the homepage.</p>
+    </div>
+  </section>
+
+  <section class="resources-section">
+    <div class="wrap">
+      <div class="resource-grid">
+
+        <div class="resource-card featured">
+          <div class="resource-icon">Cite</div>
+          <h3>Citation Helper</h3>
+          <p>A quick tool for formatting and managing citations for papers and reports.</p>
+          <a class="resource-link" href="citation-helper.html" target="_blank" rel="noopener noreferrer">Open Citation Helper ↗</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">CV</div>
+          <h3>Résumé</h3>
+          <p>My latest résumé — academics, internships, publications, and skills in one place.</p>
+          <a class="resource-link" href="src/pdf/CV_Dev_Patra1.pdf" target="_blank" rel="noopener noreferrer">View résumé ↗</a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-icon">GH</div>
+          <h3>GitHub</h3>
+          <p>Code, projects, and experiments — from process control models to small web tools.</p>
+          <a class="resource-link" href="https://github.com/devpatra07" target="_blank" rel="noopener noreferrer">Visit GitHub ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>Design &amp; built by Dev Patra © twentytwentysix</span>
+      <a href="index.html#home" class="back-top mono">← back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>

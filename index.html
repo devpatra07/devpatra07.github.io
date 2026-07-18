@@ -46,6 +46,7 @@
 
   body{
     margin:0;
+    overflow-x:hidden;
     background:
       radial-gradient(1100px 550px at 88% -8%, rgba(109,75,242,0.06), transparent 60%),
       radial-gradient(900px 500px at 0% 8%, rgba(13,143,131,0.05), transparent 55%),
@@ -131,6 +132,15 @@
     }
   }
 
+  @media (max-width: 480px){
+    .wrap{ padding:0 18px; }
+    .nav{ padding:12px 18px; }
+    .brand{ gap:10px; }
+    .brand-logo{ width:38px; height:38px; font-size:0.95rem; }
+    .brand-name{ font-size:0.95rem; }
+    .brand-role{ display:none; }
+  }
+
   /* ---------- Hero ---------- */
   .hero{ padding:96px 0 72px; position:relative; overflow:hidden; }
   .hero .wrap{ position:relative; z-index:1; }
@@ -148,8 +158,23 @@
     display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
   }
   @media (max-width: 900px){
+    .hero{ padding:64px 0 52px; }
     .hero-grid{ grid-template-columns:1fr; gap:44px; }
     .gallery-wrap{ order:-1; }
+    .stat-row{ gap:10px; }
+    .stat{ min-width:0; flex:1 1 calc(50% - 10px); }
+  }
+
+  @media (max-width: 480px){
+    .hero{ padding:44px 0 40px; }
+    .hero h1{ font-size:clamp(1.9rem, 8.5vw, 2.6rem); }
+    .hero-sub{ font-size:1rem; }
+    .eyebrow{ font-size:0.76rem; margin-bottom:16px; }
+    .stat-row{ margin-top:26px; }
+    .stat{ padding:12px 14px; }
+    .stat .num{ font-size:1.25rem; }
+    .hero-actions{ margin-top:28px; gap:10px; }
+    .hero-actions .btn{ flex:1 1 100%; justify-content:center; }
   }
   .hero-text > *{ opacity:0; animation: heroIn .7s ease forwards; }
   .hero-text .eyebrow{ animation-delay:.05s; }
@@ -218,9 +243,24 @@
   }
   .section-head h2{ font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight:600; }
 
+  @media (max-width: 780px){
+    section{ padding:60px 0 60px; }
+    .section-head{ margin-bottom:32px; }
+  }
+  @media (max-width: 480px){
+    section{ padding:44px 0 44px; }
+    .section-head{ margin-bottom:24px; }
+  }
+
   /* ---------- About ---------- */
   .about-grid{ display:grid; grid-template-columns:1.3fr 0.9fr; gap:56px; align-items:start; }
   @media (max-width: 860px){ .about-grid{ grid-template-columns:1fr; } }
+  @media (max-width: 480px){
+    .about-grid{ gap:32px; }
+    .about-list{ gap:16px; }
+    .about-list .ico{ width:34px; height:34px; }
+    .about-list p{ font-size:0.9rem; }
+  }
 
   .about-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:22px; }
   .about-list li{ display:flex; gap:16px; }
@@ -271,6 +311,13 @@
   }
   .avatar-card h3{ font-size:1.15rem; font-weight:600; }
   .avatar-card .role{ color:var(--muted); font-size:0.9rem; margin-top:4px; }
+
+  @media (max-width: 480px){
+    .avatar-card{ padding:24px 20px; }
+    .avatar-orbit-wrap{ width:108px; height:108px; }
+    .avatar-photo{ width:108px; height:108px; }
+    @keyframes orbit{ from{ transform: rotate(0deg) translateX(66px) rotate(0deg); } to{ transform: rotate(360deg) translateX(66px) rotate(-360deg); } }
+  }
 
   .resume-btn{
     margin-top:24px; width:100%; justify-content:center;
@@ -350,6 +397,12 @@
     margin-bottom:8px; background:var(--tint-amber);
   }
 
+  @media (max-width: 560px){
+    .tl-item{ grid-template-columns:1fr; gap:8px; padding:20px; }
+    .tl-num{ padding-top:0; }
+    .tl-item h3{ font-size:0.98rem; }
+  }
+
   .timeline.reveal .tl-item{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease; }
   .timeline.show .tl-item{ opacity:1; transform:none; }
   .timeline.show .tl-item:nth-child(1){ transition-delay:.05s; }
@@ -382,6 +435,13 @@
 
   .exp-body{ display:grid; grid-template-columns:1fr 220px; gap:28px; align-items:center; }
   @media (max-width: 760px){ .exp-body{ grid-template-columns:1fr; } }
+  @media (max-width: 560px){
+    .exp-card{ padding:20px; margin-bottom:16px; }
+    .exp-body{ gap:18px; }
+    .exp-photo{ aspect-ratio:16/9; }
+    .exp-head h3{ font-size:1.02rem; }
+    .exp-card ul{ padding-left:18px; font-size:0.9rem; }
+  }
   .exp-photo{
     border-radius:12px; overflow:hidden; border:1px solid var(--tint-amber-line);
     aspect-ratio:4/3; background:var(--tint-amber);
@@ -400,6 +460,11 @@
 
   /* ---------- Skills tiles ---------- */
   .tiles{ display:grid; grid-template-columns:repeat(auto-fill, minmax(96px, 1fr)); gap:14px; }
+
+  @media (max-width: 480px){
+    .tiles{ grid-template-columns:repeat(3, 1fr); gap:10px; }
+    .tile .sym{ font-size:1.25rem; }
+  }
   .tile{
     aspect-ratio:1/1; border:1px solid var(--line); border-radius:12px;
     background:var(--surface); padding:10px;
@@ -446,6 +511,13 @@
   }
   .back-top:hover{ color:var(--teal); }
 
+  @media (max-width: 480px){
+    footer{ padding:40px 0 26px; }
+    .footer-top{ flex-direction:column; align-items:flex-start; gap:20px; }
+    .footer-quote{ font-size:1.1rem; }
+    .footer-bottom{ flex-direction:column; gap:8px; }
+  }
+
   .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.show{ opacity:1; transform:none; }
 
@@ -476,6 +548,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="resources.html">Resources</a></li>
     </ul>
     <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -487,6 +560,7 @@
     <a href="#experience">Experience</a>
     <a href="#research">Research</a>
     <a href="#skills">Skills</a>
+    <a href="resources.html">Resources</a>
   </div>
 </header>
 
